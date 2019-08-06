@@ -3,7 +3,7 @@
 class Dao
 {
 
-    private $server = "mysql:host=localhost;dbname=exo_poo_1";
+    private $server = "mysql:host=localhost;dbname=exo_qcm";
 
     private $user = "commun";
 

@@ -19,7 +19,7 @@ $result = $crudcontroller->readData();
 <body>
 
     <div class="row">
-        <a href="add.php"><button class="btn btn-primary btn-add">Add New Record</button></a>
+        <a href="add.php"><button class="btn btn-primary btn-add">Ajouter nouveau QCM</button></a>
     </div>
 
     <div class="row" id="container">

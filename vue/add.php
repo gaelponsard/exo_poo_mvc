@@ -23,39 +23,60 @@
             <form method="POST">
                 <div class="form-group">
                     <div class="row">
-                        <label>Title</label> <input type="text"
-                            name="title" id="title" class="form-control"
+                        <label>Nom du QCM</label> <input type="text"
+                            name="title" id="nom_qcm" class="form-control"
                             required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
-                        <label>Description</label>
-                        <textarea class="form-control" id="description"
-                            name="description" required></textarea>
+                        <label>Question</label> <input type="text"
+                            name="question" id="intitule_question" class="form-control"
+                            required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
-                        <label>URL</label> <input type="text" name="url"
-                            id="url" class="form-control" required>
+                    <label class="form-check-label" for="check">Réponse 1 (cochez si la réponse est correcte)</label>
+                        <textarea class="form-control" id="intitule_reponse"
+                            name="reponse" required></textarea>
+                            <input type="checkbox" class="form-check-input" id="valid">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
-                        <label>Category</label> <input type="text"
-                            name="category" id="category"
-                            class="form-control" required>
+                    <label class="form-check-label" for="check">Réponse 2 (cochez si la réponse est correcte)</label>
+                        <textarea class="form-control" id="intitule_reponse"
+                            name="reponse" required></textarea>
+                            <input type="checkbox" class="form-check-input" id="valid">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                    <label class="form-check-label" for="check">Réponse 3 (cochez si la réponse est correcte)</label>
+                        <textarea class="form-control" id="intitule_reponse"
+                            name="reponse" required></textarea>
+                            <input type="checkbox" class="form-check-input" id="valid">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                    <label class="form-check-label" for="check">Réponse 4 (cochez si la réponse est correcte)</label>
+                        <textarea class="form-control" id="intitule_reponse"
+                            name="reponse" required></textarea>
+                            <input type="checkbox" class="form-check-input" id="valid">
                     </div>
                 </div>
 
 
                 <div class="form-group">
                     <div class="row">
-                        <button class="btn btn-primary" name="add">Submit</button>
+                        <button class="btn btn-primary" name="add">Soumettre</button>
                     </div>
                 </div>
 

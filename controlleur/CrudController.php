@@ -13,7 +13,7 @@ class CrudController
             
             $conn = $dao->openConnection();
             
-            $sql = "SELECT id,title,description, url, category FROM `tb_links` ORDER BY id DESC";
+            $sql = "SELECT * FROM `qcm`";
             
             $resource = $conn->query($sql);
             
@@ -38,7 +38,7 @@ class CrudController
             
             $conn = $dao->openConnection();
             
-            $sql = "SELECT id,title,description, url, category FROM `tb_links` WHERE id=" . $id . " ORDER BY id DESC";
+            $sql = "SELECT * FROM `qcm` WHERE id=" . $id . " ORDER BY id DESC";
             
             $resource = $conn->query($sql);
             
@@ -54,22 +54,52 @@ class CrudController
         }
     }
 
-    /* Add New Record */
-    public function add($formArray)
+    /* Add qcm */
+    public function add_qcm($formArray)
     {
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        $url = $_POST['url'];
-        $category = $_POST['category'];
+        $nom_qcm = $_POST['nom_qcm'];
         
         $dao = new Dao();
         
         $conn = $dao->openConnection();
         
-        $sql = "INSERT INTO `tb_links`(`title`, `description`, `url`, `category`) VALUES ('" . $title . "','" . $description . "','" . $url . "','" . $category . "')";
+        $sql = "INSERT INTO `qcm`(`nom_qcm`) VALUES ('" . $nom_qcm . "')";
         $conn->query($sql);
         $dao->closeConnection();
     }
+
+
+/* Add question */
+public function add_question($formArray)
+{
+    $intitule_question = $_POST['intitule_question'];
+    $intitule_reponse = $_POST['intitule_reponse'];
+    $valid = $_POST['valid'];
+    
+    $dao = new Dao();
+    
+    $conn = $dao->openConnection();
+    
+    $sql = "INSERT INTO `question`(`intitule_question`) VALUES ('" . $intitule_question . "')";
+    $conn->query($sql);
+    $dao->closeConnection();
+}
+
+/* Add reponse */
+public function add_reponse($formArray)
+{
+    $intitule_reponse = $_POST['intitule_reponse'];
+    $valid = $_POST['valid'];
+    
+    $dao = new Dao();
+    
+    $conn = $dao->openConnection();
+    
+    $sql = "INSERT INTO `reponse`(`intitule_reponse`,`valid`) VALUES ('" . $intitule_question . "')";
+    $conn->query($sql);
+    $dao->closeConnection();
+}
+
 
     /* Edit a Record */
     public function edit($formArray)

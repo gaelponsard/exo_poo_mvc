@@ -4,15 +4,11 @@ if (! empty($result)) {
         ?>
 <div class="box-container">
     <div class="title">
-        <a href="<?php echo $result[$k]["url"]; ?>"><?php echo $result[$k]["title"]; ?></a>
+        <?php echo $result[$k]["nom_qcm"]; ?>
     </div>
-    <div class="description"><?php echo $result[$k]["description"]; ?>...</div>
-    <div class="category"><?php echo $result[$k]["category"]; ?></div>
     <div class="action">
         <button class="btn-action bn-edit"
-            id="<?php echo $result[$k]["id"]; ?>">Edit</button>
-        <button class="btn-action bn-delete"
-            id="<?php echo $result[$k]["id"]; ?>">Delete</button>
+            id="<?php echo $result[$k]["id"]; ?>">Répondre</button>
     </div>
 </div>
 <?php
